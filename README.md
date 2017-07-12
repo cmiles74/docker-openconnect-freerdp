@@ -47,11 +47,10 @@ scripts you might write. To get you started, there are two sample scripts in the
 directory and editing them to suit your needs. You can then build your own
 custom version of the image.
 
-  docker build -t yourhandle/docker-openconnect-freerdp ${PWD}
+    docker build -t yourhandle/docker-openconnect-freerdp ${PWD}
   
 From there you can link the "run" command somewhere convenient on your path.
 
------
 
 [0]: http://www.infradead.org/openconnect/
 [1]: http://www.freerdp.com/
