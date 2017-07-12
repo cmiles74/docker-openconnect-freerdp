@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# allow all docker hosts to our X server
+xhost +local:docker
+
+# start our container and a terminal
+docker run \
+       -it \
+       --rm \
+      -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+      -v ${HOME}:/shared \
+      -e DISPLAY=unix${DISPLAY} \
+      --device /dev/snd \
+      --privileged \
+      --name anyconnect-remmina \
+      cmiles74/docker-openconnect-freerdp
+

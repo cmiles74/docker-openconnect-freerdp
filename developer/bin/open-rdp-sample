@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+# Copy this file to the "custom-bin" folder and edit it there. Everything in
+# the "custom-bin" folder will be added to the path at image build time.
+#
+# You'll need to customize this file. Replace the name of the RDP host and you
+# will be mostly good! By default, the "shared" folder will be mapped onto the
+# RDP host.
+#
+
+xfreerdp /v:myrdphost.com +fonts +clipboard /a:drive,shared,/shared

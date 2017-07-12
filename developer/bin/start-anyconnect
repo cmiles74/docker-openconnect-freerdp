@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Copy this file to the "custom-bin" folder and edit it there. Everything in
+# the "custom-bin" folder will be added to the path at image build time.
+#
+# You will want to customize this file! set the correct VPN endpoint and you
+# will be good to go.
+#
+
+sudo openconnect https://myvpnendpoint.com
