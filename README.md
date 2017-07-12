@@ -24,8 +24,9 @@ need. It allows X11 access for the docker user, provides access to your X server
 and runs Docker in ["privileged" mode][2]. We need it to run in privileged mode so
 that OpenConnect can create virtual network adapters (TUN).
 
-Once the image has started up, it will create a new [tmux][3] session and drops
-you at the shell [(fish)][4]. From there you can connect to your VPN endpoint.
+Once the image has started up, it will create a new [tmux][3] session (using a
+pretty nice configuration from [gpakosz][4]) and drops you at the
+shell [(fish)][5]. From there you can connect to your VPN endpoint.
 
     sudo openconnect https://my-vpn-ssl-endpoint.com
     
@@ -58,4 +59,5 @@ From there you can link the "run" command somewhere convenient on your path.
 [1]: http://www.freerdp.com/
 [2]: https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities
 [3]: http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
-[4]: https://fishshell.com/docs/current/tutorial.html
+[4]: https://github.com/gpakosz/.tmux
+[5]: https://fishshell.com/docs/current/tutorial.html
