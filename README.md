@@ -5,21 +5,23 @@ You can pull this image from Docker Hub.
 
     docker pull cmiles74/docker-openconnect-freerdp
     
-I have to use [OpenConnect][0] at work to connect to Cisco SSL VPN endpoint and it's
-not a lot of fun. Invariably I will connect, only to find that I've lost access
-to the internet on my local machine. Or maybe internet service remains but
-everying on my local network becomes inaccessible. Yuck!
+I have to use [OpenConnect][0] at work to connect to a Cisco SSL VPN endpoint
+and it's not a lot of fun. Invariably I will connect, only to find that I've
+lost access to the internet on my local machine. Or maybe internet service
+remains but everying on my local network becomes inaccessible. Yuck!
 
-This image comes with OpenConnect and [FreeRDP][1] (as well as the supporting stuff,
-like X.org) that is ready to go. You can download this image, run it, and
-connect to that VPN and start RDP-ing like a pro.
+If you use this image, you don't have to sully the network configuration with
+the random detritus that the OpenConnect client is throwing around. This image
+comes with OpenConnect and [FreeRDP][1] (as well as the supporting stuff, like
+X.org) that is ready to go. You can download this image, run it, and connect to
+that VPN and start RDP-ing like a pro.
 
 Running the Image
 -------------------
 
 This image comes with a "run" script that will probably do everything that you
 need. It allows X11 access for the docker user, provides access to your X server
-and runs Docker in "privileged" [mode][2]. We need it to run in privileged mode so
+and runs Docker in ["privileged" mode][2]. We need it to run in privileged mode so
 that OpenConnect can create virtual network adapters (TUN).
 
 Once the image has started up, it will create a new [tmux][3] session and drops
@@ -30,13 +32,13 @@ you at the shell [(fish)][4]. From there you can connect to your VPN endpoint.
 From there you can follow the prompts and connect to your endpoint. You can
 now start your RDP session.
 
-    xfreerdp /v:my-rdp-host.com +fonts +clipboard /a:drive,shared,/shared
+    xfreerdp /v:my-rdp-host.com +fonts +clipboard /a:drive,$HOME,/shared
     
 The command above will connect your your host, use anti-aliased fonts and enable
-the clipboard as well as map the "shared" directory onto your host.
+the clipboard as well as maps in your home directory onto your host.
 
-When you exit the tmux session, the docker instance will be removed, keeping
-your workstation clean and tidy.
+When you exit the tmux session the docker instance will be removed, keeping your
+workstation clean and tidy.
 
 Customizing the Image
 ------------------------
