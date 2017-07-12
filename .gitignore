@@ -1,3 +1,3 @@
-custom-bin
+custom-bin/*
 *.pcf
 *-private
