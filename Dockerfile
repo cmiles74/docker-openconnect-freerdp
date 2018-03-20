@@ -4,7 +4,7 @@ from dock0/arch:latest
 env PATH="/developer/bin:${PATH}"
 
 # install X Org
-run pacman -Syqu --noconfirm base-devel binutils tmux bash man fish git openssh wget curl rxvt-unicode vi xorg-xrdb xorg-fonts-encodings xorg-font-utils xrandr
+run pacman -Syqu --noconfirm base-devel binutils tmux bash man fish git openssh wget curl rxvt-unicode vi xorg-xrdb xorg-fonts-encodings xorg-font-utils xorg-xrandr
 
 # install openconnect
 run pacman -Syqu --noconfirm openconnect
