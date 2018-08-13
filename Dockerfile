@@ -4,7 +4,7 @@ from dock0/arch:latest
 env PATH="/developer/bin:${PATH}"
 
 # install X Org
-run pacman -Syqu --noconfirm base-devel binutils tmux bash man fish git openssh wget curl rxvt-unicode vi xorg-xrdb xorg-fonts-encodings xorg-font-utils xorg-xrandr
+run pacman -Syqu --noconfirm base-devel binutils tmux bash man fish git openssh wget curl rxvt-unicode vi xorg-xrdb xorg-fonts-encodings xorg-font-utils xorg-xrandr bdf-unifont
 
 # install openconnect
 run pacman -Syqu --noconfirm openconnect
@@ -32,15 +32,6 @@ workdir /developer
 run mkdir aur
 run git clone https://aur.archlinux.org/ttf-hack.git aur/ttf-hack
 workdir /developer/aur/ttf-hack
-run makepkg
-user root
-run pacman -U --noconfirm *xz
-
-# build unifont aur package
-user developer
-workdir /developer
-run git clone https://aur.archlinux.org/ttf-unifont.git aur/ttf-unifont
-workdir /developer/aur/ttf-unifont
 run makepkg
 user root
 run pacman -U --noconfirm *xz
