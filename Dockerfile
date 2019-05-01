@@ -1,8 +1,5 @@
 from alpine:edge
 
-# setup our custom path
-env PATH="/developer/bin:${PATH}"
-
 # add repositories
 run echo "@community http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 run echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
@@ -13,7 +10,7 @@ run apk update
 # update and install packages
 run apk update
 run apk upgrade
-run apk add openconnect@testing midori@community freerdp@community bash tmux sudo xrandr openssh xsel@testing
+run apk add openconnect@testing freerdp@community bash bash-completion tmux sudo openssh iputils 
 
 # create our developer user
 workdir /root
@@ -36,7 +33,9 @@ run echo "%developer ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 user root
 workdir /developer
 
-# start a terminal
+# switch users
 user developer
+
+# start a terminal
 entrypoint ["tmux", "-u"]
 

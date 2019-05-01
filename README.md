@@ -10,10 +10,10 @@ and it's not a lot of fun. Invariably I will connect, only to find that I've
 lost access to the internet on my local machine. Or maybe internet service
 remains but everying on my local network becomes inaccessible. Yuck!
 
-If you use this image, you don't have to sully the network configuration with
-the random detritus that the OpenConnect client is throwing around. This image
-comes with OpenConnect and [FreeRDP][1] (as well as the supporting stuff, like
-X.org) that is ready to go. You can download this image, run it, and connect to
+If you use this image, you don't have to sully the network configuration of your
+machine with the random detritus that the OpenConnect client is throwing around.
+This image comes with OpenConnect and [FreeRDP][1] (as well as the supporting
+stuff) that is ready to go. You can download this image, run it, and connect to
 that VPN and start RDP-ing like a pro.
 
 Running the Image

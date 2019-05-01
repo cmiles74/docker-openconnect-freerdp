@@ -8,8 +8,9 @@ docker run \
        -it \
        --rm \
       -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-      -v ${HOME}:/shared \
+      -v ${HOME}:/developer/shared \
       -e DISPLAY=unix${DISPLAY} \
+      -p 8989:8989 \
       --device /dev/snd \
       --privileged \
       --name anyconnect-remmina \

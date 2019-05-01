@@ -1,3 +1,8 @@
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
 Urxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode
 URxvt.perl-ext-common: default,matcher
@@ -8,14 +13,28 @@ URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
 
 URxvt.scrollBar: false
-URxvt.font: xft:Hack:size=9
-URxvt.boldFont: xft:Hack:style:Bold:size=9,xft:Unifont:size=9
-URxvt.ItalicFont: xft:Hack:style:Italic:size=9,xft:Unifont:size=9
-URxvt.boldItalicFont: xft:Hack:style:Bold Italic:size=9,xft:Unifont:size=9 
-URxvt.letterSpace: -1
-
+URxvt.font: xft:Hack:pixelsize=12,xft:Unifont:pixelsize=10
 URxvt.depth: 32
 
-URxvt.matcher.button: 1
-URxvt.url-select.underline: true
-URxvt.geometry: 100x24
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+URxvt.scrollTtyKeypress: true
+
+URxvt.foreground: #C8C8C8
+URxvt.background: #000000
+URxvt.color0:     #2E3436
+URxvt.color1:     #CC0000
+URxvt.color2:     #4E9A06
+URxvt.color3:     #C4A000
+URxvt.color4:     #3465A4
+URxvt.color5:     #75507B
+URxvt.color6:     #06989A
+URxvt.color7:     #D3D7CF
+URxvt.color8:     #555753
+URxvt.color9:     #EF2929
+URxvt.color10:    #8AE234
+URxvt.color11:    #FCE94F
+URxvt.color12:    #729FCF
+URxvt.color13:    #AD7FA8
+URxvt.color14:    #34E2E2
+URxvt.color15:    #EEEEEC
